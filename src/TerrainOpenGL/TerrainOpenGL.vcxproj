@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F2F97B26-F1B5-4DA4-BE93-B80654446E76}</ProjectGuid>
+    <RootNamespace>TerrainOpenGL</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\glew\glew-1.9.0\include;C:\sfml\SFML-2.1\include;C:\sfml\sfgui32\include;C:\Users\StephenCathcart\Documents\Visual Studio 2012\Projects\TerrainOpenGL\SOIL;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\glew\glew-1.9.0\lib;C:\sfml\SFML-2.1\lib;C:\sfml\sfgui32\lib;C:\Users\StephenCathcart\Documents\Visual Studio 2012\Projects\TerrainOpenGL\SOIL\Debug;$(LibraryPath)</LibraryPath>
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\glew\glew-1.9.0\include;C:\sfml\SFML-2.1\include;C:\sfml\sfgui32\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\glew\glew-1.9.0\lib;C:\sfml\SFML-2.1\lib;C:\sfml\sfgui32\lib;C:\Users\StephenCathcart\Documents\Visual Studio 2012\Projects\TerrainOpenGL\SOIL\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Users\StephenCathcart\Documents\Visual Studio 2012\Projects\TerrainOpenGL\TerrainOpenGL\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>NotSet</SubSystem>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-network-d.lib;sfgui-d.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;opengl32.lib;sfml-graphics-2.lib;sfml-audio-2.lib;sfml-window-2.lib;sfml-system-2.lib;sfml-network-2.lib;sfgui.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DiamondSquare.cpp" />
+    <ClCompile Include="EasyBMP\EasyBMP.cpp" />
+    <ClCompile Include="Icosahedron.cpp" />
+    <ClCompile Include="GUI.cpp" />
+    <ClCompile Include="Light.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="OGLRenderer.cpp" />
+    <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="TerrainHelper.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="DiamondSquare.h" />
+    <ClInclude Include="EasyBMP\EasyBMP.h" />
+    <ClInclude Include="EasyBMP\EasyBMP_BMP.h" />
+    <ClInclude Include="EasyBMP\EasyBMP_DataStructures.h" />
+    <ClInclude Include="EasyBMP\EasyBMP_VariousBMPutilities.h" />
+    <ClInclude Include="Icosahedron.h" />
+    <ClInclude Include="GUI.h" />
+    <ClInclude Include="Light.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="OGLRenderer.h" />
+    <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="Shader.h" />
+    <ClInclude Include="TerrainHelper.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\frag.glsl" />
+    <None Include="Shaders\geom.glsl" />
+    <None Include="Shaders\tcs.glsl" />
+    <None Include="Shaders\tes.glsl" />
+    <None Include="Shaders\vert.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

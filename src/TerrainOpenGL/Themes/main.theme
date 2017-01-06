@@ -1,0 +1,29 @@
+Window {
+    BorderColor: #3e3e4099;
+	BackgroundColor: #3e3e4099;
+    TitleBackgroundColor: #0097fbff;
+    FontName: Fonts/segoeui.ttf;
+    FontSize: 18;
+    BorderWidth: 0.0f;
+    Padding: 0.0f;
+}
+
+Notebook {
+    BackgroundColor: #2d2d3099;
+    BackgroundColorPrelight: #0097fbff;
+    BackgroundColorDark: #222222ff;
+    BorderWidth: 0.0f;
+}
+
+Button {
+    BackgroundColor: #0097fbff;
+    BorderWidth: 0.0f;
+}
+
+Label {
+    
+}
+
+Separator {
+    Color: #0097fbff;
+}
